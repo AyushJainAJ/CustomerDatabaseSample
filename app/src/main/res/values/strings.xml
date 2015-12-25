@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DatabaseCustomer</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_customer">AddCustomer</string>
+    <string name="title_activity_add_order">AddOrder</string>
+    <string name="title_activity_view_customers">ViewCustomers</string>
+    <string name="title_activity_view_customer_details">ViewCustomerDetails</string>
+    <string name="title_activity_delete_user">DeleteUser</string>
+</resources>

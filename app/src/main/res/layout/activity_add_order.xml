@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="Order ID"
+        android:id="@+id/oid"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="Customer ID"
+        android:id="@+id/custid"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/oid"
+        android:layout_alignLeft="@+id/oid"
+        android:layout_alignStart="@+id/oid" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/oamt"
+        android:hint="Order Amount"
+        android:layout_above="@+id/imageButton6"
+        android:layout_marginBottom="46dp"
+        android:layout_alignLeft="@+id/custid"
+        android:layout_alignStart="@+id/custid" />
+
+    <ImageButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="addOrder"
+        android:id="@+id/imageButton6"
+        android:background="@drawable/add_order"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
+</RelativeLayout>

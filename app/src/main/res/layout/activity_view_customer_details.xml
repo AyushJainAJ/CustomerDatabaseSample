@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <TextView
+        android:id="@+id/customerid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sample"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/backButton"
+        android:layout_toEndOf="@+id/backButton" />
+
+    <TextView
+        android:id="@+id/customername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/customerid"
+        android:layout_alignStart="@+id/customerid"
+        android:layout_alignTop="@+id/textView2"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer ID:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Name:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone #:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/customerphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/customername"
+        android:layout_alignStart="@+id/customername"
+        android:layout_alignTop="@+id/textView3"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Orders"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ListView
+            android:id="@+id/ordersList"
+            android:layout_width="wrap_content"
+            android:layout_height="200sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:choiceMode="multipleChoice" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:id="@+id/relativeLayout2"
+        android:layout_above="@+id/backButton"
+        android:layout_alignRight="@+id/tickButton"
+        android:layout_alignEnd="@+id/tickButton">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Update Details"
+            android:id="@+id/textView5"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Customer Name"
+            android:ems="10"
+            android:id="@+id/updatedname"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:hint="Customer Phone #"
+            android:id="@+id/updatedphone"
+            android:layout_below="@+id/updatedname"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/updatedCity"
+            android:hint="Customer City"
+            android:layout_below="@+id/updatedphone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:id="@+id/backButton"
+        android:background="@drawable/back"
+        android:onClick="goBack"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/tick"
+        android:id="@+id/tickButton"
+        android:onClick="updateDetails"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/deleteIcon"
+        android:onClick="deleteOrders"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/trash"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_alignLeft="@+id/tickButton" />
+
+
+</RelativeLayout>
